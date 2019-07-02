@@ -114,15 +114,3 @@ function startGame() {
     var y = document.getElementById("playoptions");
     y.style.display = none;
 }
-function resetGame(){
-  pColor0 = '#FFF';
-  pColor1 = '#CCCCFF';
-  pColor2 = '#CCFFCC';
-
-  pName1 = 'Player One';
-  pName2 = 'Player Two';
-
-  turn = 0;
-  main.style.display = 'none';
-  sub.style.display = 'sub';
-}

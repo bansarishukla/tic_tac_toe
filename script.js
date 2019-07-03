@@ -114,3 +114,24 @@ function startGame() {
     var y = document.getElementById("playoptions");
     y.style.display = none;
 }
+$(document).ready(function() {
+  var $dropdown1 = $("select[name='dropdown1']");
+  var $dropdown2 = $("select[name='dropdown2']");
+
+  $dropdown1.change(() => {
+    $dropdown2.find('option').prop("disabled", false);
+    var selectedItem = $dropdown1.val();
+
+    if (selectedItem) {
+        $dropdown2.find('option[value="' + selectedItem + '"]').prop("disabled", true);
+    }
+  });
+  $dropdown2.change(() => {
+    $dropdown1.find('option').prop("disabled", false);
+    var selectedItem = $dropdown2.val();
+
+    if (selectedItem) {
+        $dropdown1.find('option[value="' + selectedItem + '"]').prop("disabled", true);
+    }
+  });
+});

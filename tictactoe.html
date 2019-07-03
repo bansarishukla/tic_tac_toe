@@ -13,8 +13,9 @@
         <p>
           Player-1: 
           <input type="text" id="p1-name" value="Player One" onClick="this.select()" />
-          <select id="p1-bg" >
-            <option value="#CCCCFF" selected="selected">Light Blue</option>
+          <select id="p1-bg" name="dropdown1">
+            <option selected disabled>choose color</option>
+            <option value="#CCCCFF">Light Blue</option>
             <option value="#FF9900">Orange</option>
             <option value="#FFCCCC">Light Red</option>
             <option value="#660000">Brown</option>
@@ -26,23 +27,21 @@
         <p>
             Player-2:
             <input type="text" id="p2-name" value="Player Two" onClick="this.select()" />
-            <select id="p2-bg" >
+            <select id="p2-bg" name="dropdown2">
+              <option selected disabled>choose color</option>
               <option value="#FFCCCC">Light Red</option>
               <option value="#CCCCFF">Light Blue</option>
               <option value="#FF9900">Orange</option>
               <option value="#660000">Brown</option>
               <option value="#99CCFF">Sky Blue</option>
-              <option value="#CCFFCC" selected="selected">Light Green</option>
+              <option value="#CCFFCC">Light Green</option>
               <option value="#FFCCFF">Pink</option>
             </select>
             <button onClick="startGame()" class="start_game">Start Game</button>
-          </p>
-          <p>
-            
-          </p>
+        </p>
     </div>
 
-    </div>
+    <!-- </div> -->
     <div class="container" id="main">
       <span id="turn">Play</span>
       <!-- show x 0r 0 in div click -->
@@ -55,10 +54,13 @@
       <div class="box" id="box7"></div>
       <div class="box" id="box8"></div>
       <div class="box" id="box9"></div>
+       <!-- play again and reset all info -->
       <button onClick="replay()" class="play">Play Again</button>
     </div>
-    <!-- play again and reset all info -->
-    <!-- <button onClick="replay()">Play Again</button> -->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    
+    
     <script src="script.js"></script>
   </body>
 
